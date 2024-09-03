@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Common;
+using Sorting;
 using System;
 
 namespace UnitTests
@@ -7,7 +7,7 @@ namespace UnitTests
     [TestClass]
     public class SortingAlgorithms
     {
-        public void TestSortingAlgorithm(Common.ISortingAlgorithm algorithm)
+        public void TestSortingAlgorithm(ISortingAlgorithm algorithm)
         {
             int[] A = new int[] { 4, 3, 2, -1, 5, 25 };
             algorithm.Sort(A);
@@ -30,7 +30,7 @@ namespace UnitTests
         public void SelectionSort()
         {
 
-            Common.SelectionSort sortingAlgorithm = new Common.SelectionSort();
+            SelectionSort sortingAlgorithm = new SelectionSort();
             TestSortingAlgorithm(sortingAlgorithm);
         }
 
@@ -38,7 +38,7 @@ namespace UnitTests
         public void QuickSort()
         {
 
-            Common.QuickSort sortingAlgorithm = new Common.QuickSort();
+            QuickSort sortingAlgorithm = new QuickSort();
             TestSortingAlgorithm(sortingAlgorithm);
         }
 
@@ -46,7 +46,7 @@ namespace UnitTests
         public void MergeSort()
         {
 
-            Common.MergeSort sortingAlgorithm = new Common.MergeSort();
+            MergeSort sortingAlgorithm = new MergeSort();
             TestSortingAlgorithm(sortingAlgorithm);
         }
     }

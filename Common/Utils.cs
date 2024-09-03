@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common
+namespace Sorting
 {
     public class Utils
     {
