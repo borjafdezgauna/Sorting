@@ -43,9 +43,9 @@ class MainClass
         Task<bool> testTask = Task.Factory.StartNew(() => { return testFunc(algorithm); });
         Task timeoutTask = Task.Delay(timeoutSecs * 1000);
         Task winner = Task.WhenAny(testTask, timeoutTask).Result;
-        if (winner == testTask && testTask.Result)
+        if (winner == testTask)
         {
-            return testTask.Result;
+            return true;
         }
         return false;
     }
@@ -54,14 +54,23 @@ class MainClass
     {
         bool success = RunTestsWithTimeout(TestSortingAlgorithm, new SelectionSort(), 20);
         if (!success)
+        {
+            Console.WriteLine("The tests took too long. Try to make the algorithm faster");
             return;
+        }
 
         success = RunTestsWithTimeout(TestSortingAlgorithm, new QuickSort(), 20);
         if (!success)
+        {
+            Console.WriteLine("The tests took too long. Try to make the algorithm faster");
             return;
+        }
 
         success = RunTestsWithTimeout(TestSortingAlgorithm, new MergeSort(), 20);
         if (!success)
+        {
+            Console.WriteLine("The tests took too long. Try to make the algorithm faster");
             return;
+        }
     }
 }
