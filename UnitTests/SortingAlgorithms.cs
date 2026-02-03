@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Sorting;
+using EDA;
 using System;
 
 namespace UnitTests

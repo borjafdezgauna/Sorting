@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Sorting;
+using EDA;
 class MainClass
 {
     public static bool TestSortingAlgorithm(ISortingAlgorithm sortingAlgorithm)
