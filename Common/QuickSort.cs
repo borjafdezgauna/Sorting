@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sorting
+namespace EDA
 {
     public class QuickSort : ISortingAlgorithm
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sorting
+namespace EDA
 {
     public class Utils
     {
